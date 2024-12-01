@@ -107,7 +107,6 @@ def adam_g_substring(s, sub):
         return i - 1
 
 
-
 # TESTS
 
 
@@ -117,7 +116,8 @@ test_suite = [
     (4, ("hello world", "o world")),
     (0, ("hello world", "hello world")),
     (10, ("hello world", "d")),
-    (14, ('cdzFOENKrrxHejVtmPpj', 'V')),
+    (14, ("cdzFOENKrrxHejVtmPpj", "V")),
+    (3 , ("abcabcabcdefdefabcfeddef", "abcabcdef")),
     (16, ("abcabcdfghiabcdeabcdefghiklo", "abcdef")),
     (100000, ("a" * 100000 + "b", "b")),
     (-1, ("a" * 200000, "b")),
@@ -157,5 +157,5 @@ res = Test.speed_test(
         # samuel_substring # has to pass the tests
     ],
     test_suite,
-    5
+    3
 )
